@@ -8,6 +8,10 @@ class Venue < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :dishes,
+             :through => :top_picks,
+             :source => :dish
+
   has_many   :cuisines,
              :through => :dishes,
              :source => :cuisine
