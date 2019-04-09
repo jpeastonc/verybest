@@ -6,6 +6,10 @@ class Cuisine < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :venues,
+             :through => :dishes,
+             :source => :venues
+
   # Validations
 
 end
